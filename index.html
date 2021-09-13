@@ -1,0 +1,57 @@
+<!doctype html>
+<title>Best Tacos in Taipei City</title>
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #B33A3A;
+}
+  body { text-align: center; padding: 150px; }
+  h1 { font-size: 50px; }
+  body { font: 20px Helvetica, sans-serif; color: #333; }
+  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
+  a { color: #B33A3A; text-decoration: none; }
+  a:hover { color: #333; text-decoration: none; }
+</style>
+
+<article>
+    <h1>社交工程郵件攻擊成功！</h1>
+<div id="myProgress">
+  <div id="myBar">10%</div>
+</div>
+
+<p id="demo"></p>
+<br>
+<script>
+var i = 0;
+function move() {
+  document.getElementById("demo").innerHTML = "正在竊取您的個人資料...";
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+        document.getElementById("demo").innerHTML = "已完成個人資料竊取。";
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width  + "%";
+      }
+    }
+  }
+}
+</script>
+      
+        <p>您已被視為遭受社交工程郵件攻擊成功！請您至數位學習上<a onclick = "move()"> 宣導課程</a>，以提昇您對於防範資安社交工程的安全意識。</p>
+        <p>&mdash; The Team</p>
+    </div>
+</article>
